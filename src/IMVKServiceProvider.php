@@ -11,6 +11,7 @@ class IMVKServiceProvider extends ServiceProvider
         //Указываем что пакет должен опубликовать при установке
         $this->publishes([__DIR__ . '/../public/' => public_path() . "/vendor/im_vk/"], 'assets');
         $this->publishes([__DIR__ . '/../database/' => base_path("database")], 'database');
+        $this->publishes([__DIR__ . '/../components/' => base_path("resources") . '/assets/js/components/'], 'components');
 
         // Routing
         if (! $this->app->routesAreCached()) {
