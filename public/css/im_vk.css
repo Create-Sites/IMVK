@@ -1,0 +1,8 @@
+#messages {
+    max-height: 95%;
+    overflow-y: overlay;
+}
+
+#messages .card-panel {
+    margin: 0;
+}
