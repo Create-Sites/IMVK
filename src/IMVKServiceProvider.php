@@ -25,11 +25,6 @@ class IMVKServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app['IM_VK'] = $this->app->share(function($app)
-        {
-            return new IM_VK;
-        });
-
         $this->app->booting(function()
         {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
