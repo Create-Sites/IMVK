@@ -1,0 +1,20 @@
+{
+    "name": "create-sites/imvk",
+    "description": "Real-time VK Messages for laravel 5 package",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Bogonosiuk",
+            "email": "admin@createsites.com.ua"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4",
+        "pusher/pusher-php-server": "^2.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "CreateSites\\IMVK\\": "src"
+        }
+    }
+}
