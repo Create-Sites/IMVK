@@ -7,8 +7,8 @@
 @section('content')
 
     <script type="text/javascript">
-        var pusher_key = "{{ config('broadcasting.connections.pusher.key') }}";
-        var pusher_cluster = "{{ config('broadcasting.connections.pusher.options.cluster') }}";
+        var pusher_key = "{{ env('PUSHER_KEY') }}";
+        var pusher_cluster = "{{ env('PUSHER_CLUSTER') }}";
     </script>
 
     <chat-messages :messages="{{ $messages }}" :for_user="{{ $for_user }}" :from_user="{{ $from_user }}"></chat-messages>

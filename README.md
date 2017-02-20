@@ -32,18 +32,26 @@ Register on the <a href="https://pusher.com">pusher.com</a> and add this line on
 PUSHER_APP_ID=your_pusher_id
 PUSHER_KEY=your_pusher_key
 PUSHER_SECRET=your_pusher_secret
+PUSHER_CLUSTER=your_pusher_cluster
 ```
 
 Run the console command: 
 ```bach
 php artisan migrate
 ```
-and add in your ```resources/assets/js/app.js``` new component:
+Add in your ```resources/assets/js/app.js``` new component:
 ```vue
 Vue.component('chat-messages', require('./components/ChatMessages.vue'));
 ```
-
-after include component run command:<br>
+and in your ```resources/assets/js/bootstrap.js``` import ```pusher``` package
+```js
+import Pusher from 'pusher-js';
+```
+and install ```pusher``` package:
+```bash
+npm install pusher-js --save
+```
+after install ```pusher``` run command:<br>
 if laravel 5.3:
 ```bach
 gulp

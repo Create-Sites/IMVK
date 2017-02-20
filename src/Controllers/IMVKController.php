@@ -145,10 +145,12 @@ class IMVKController extends Controller
 
         // send notification on pusher.com
          $pusher = new \Pusher(
-             config('broadcasting.connections.pusher.key'),
-             config('broadcasting.connections.pusher.secret'),
-             config('broadcasting.connections.pusher.app_id'),
-             config('broadcasting.connections.pusher.options')
+             env('PUSHER_KEY'),
+             env('PUSHER_SECRET'),
+             env('PUSHER_APP_ID'),
+             [
+                 'cluster' => env('PUSHER_CLUSTER')
+             ]
          );
 
          //set message data
