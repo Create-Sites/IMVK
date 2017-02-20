@@ -40,7 +40,7 @@ Run the console command:
 php artisan migrate
 ```
 Add in your ```resources/assets/js/app.js``` new component:
-```vue
+```js
 Vue.component('chat-messages', require('./components/ChatMessages.vue'));
 ```
 and in your ```resources/assets/js/bootstrap.js``` import ```pusher``` package
